@@ -34,5 +34,5 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation rootProject.ext.liteavSdk
+    compileOnly(rootProject.ext.liteavSdk)
 }

@@ -174,7 +174,12 @@ public class FTXPIPManager {
     }
 
     public void releaseReceiver() {
-        mActivity.unregisterReceiver(pipActionReceiver);
+        try {
+            mActivity.unregisterReceiver(pipActionReceiver);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     /**
